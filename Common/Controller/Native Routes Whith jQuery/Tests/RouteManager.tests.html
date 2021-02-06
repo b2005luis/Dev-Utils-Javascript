@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./../RouteManager.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                new RouteManager().Routes = [
+                    {path: "/Google", contract: "https://google.com"},
+                    {path: "/T1-Id", contract: "./abc123/RouteManager.tests1.html", element: "#T1-Id"},
+                    {path: "/T2-Class", contract: "./321xyz/RouteManager.tests2.html", element: ".T2-Class"},
+                    {path: "/T2-Selector", contract: "./xpto555/RouteManager.tests-selector.html", element: "main"}
+                ];
+            });
+        </script>
+    </head>
+    <body>
+        <header class="ui menu">
+            <h1 class="item">Native Routes with jQuery</h1>
+            <a class="item" href="#/T1-Id">Test 1</a>
+            <a class="item" href="#/T2-Class">Test 2</a>
+            <a class="item" href="#/T2-Selector">Test Selector</a>
+            <a class="item" href="#/Google">Goole</a>
+        </header>
+        <section class="ui segment container" id="T1-Id">
+
+        </section>
+        <section class="T2-Class ui segment container">
+
+        </section>
+        <main class="ui segment container">
+
+        </main>
+    </body>
+</html>
