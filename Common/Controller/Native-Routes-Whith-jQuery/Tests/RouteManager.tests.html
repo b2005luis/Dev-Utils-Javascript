@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Native-Routes-Whith-jQuery</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
@@ -9,11 +9,12 @@
         <script src="./../RouteManager.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                new RouteManager().Routes = [
+                const RoutesMGR = new RouteManager();
+                RoutesMGR.Routes = [
                     {path: "/Google", contract: "https://google.com"},
-                    {path: "/T1-Id", contract: "./abc123/RouteManager.tests1.html", element: "#T1-Id"},
-                    {path: "/T2-Class", contract: "./321xyz/RouteManager.tests2.html", element: ".T2-Class"},
-                    {path: "/T2-Selector", contract: "./xpto555/RouteManager.tests-selector.html", element: "main"}
+                    {path: "/T1-Id", contract: RoutesMGR.GetModule("Common", "Controller/Native-Routes-Whith-jQuery/Tests/abc123/RouteManager.tests1.html"), element: "#T1-Id"},
+                    {path: "/T2-Class", contract: RoutesMGR.GetModule("Common", "Controller/Native-Routes-Whith-jQuery/Tests/321xyz/RouteManager.tests2.html"), element: ".T2-Class"},
+                    {path: "/T2-Selector", contract: RoutesMGR.GetModule("Common", "Controller/Native-Routes-Whith-jQuery/Tests/xpto555/RouteManager.tests-selector.html"), element: "main"}
                 ];
             });
         </script>
